@@ -1,5 +1,6 @@
 const { Client, Collection } = require("discord.js-12");
 const config = require('./config.json');
+token = process.env.TOKEN;
 
 const client = new Client({
     disableEveryone: true
@@ -40,4 +41,4 @@ client.on("message", async message => {
         command.run(client, message, args);
 });
 
-client.login(config.token);
+client.login(token);
